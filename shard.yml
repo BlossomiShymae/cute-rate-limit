@@ -1,0 +1,9 @@
+name: cute-rate-limit
+version: 0.1.0
+
+authors:
+  - MissUwuieTime <87099578+MissUwuieTime@users.noreply.github.com>
+
+crystal: 1.3.2
+
+license: GPLv3
