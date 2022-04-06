@@ -24,6 +24,10 @@ require "cute-rate-limit"
 A limiter uses a token bucket based algorithm that defaults to blocking
 strategy `sleep` when limit is exceeded.
 
+In an example web API context, the limit is 20 requests every 1 second. 
+With a full bucket, the maximum burst is 20 requests before limiter blocks
+with `sleep`.
+
 To create a limiter with a `bucket_size` of 20 tokens and a `bucket_period`
 of 1000 milliseconds:
 
@@ -40,7 +44,7 @@ cute_limiter = CuteRateLimit::Limiter.new 20 1.second.total_milliseconds.to_i
 To use a limiter:
 
 ```crystal
-cute_limiter.use
+cute_limiter.use # => 19
 ```
 
 Multiple limiters can be used together in tandem:
@@ -53,7 +57,7 @@ cute_limiter1.use
 cute_limiter2.use
  ```
 
-Check the bucket of limiter with `#token_bucket`
+Check the bucket of a limiter with `#token_bucket`
 ```crystal
 cute_limiter2.token_bucket # => 100
 
