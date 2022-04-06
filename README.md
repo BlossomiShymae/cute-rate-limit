@@ -1,6 +1,6 @@
 # cute-rate-limit
 
-A naive cute rate limiter in Crystal that implements token bucket algorithm. Uses
+A cute rate limiter in Crystal that implements token bucket algorithm. Uses
 `sleep` blocking strategy when limit is exceeded.
 
 ## Installation
@@ -24,9 +24,13 @@ require "cute-rate-limit"
 A limiter uses a token bucket based algorithm that defaults to blocking
 strategy `sleep` when limit is exceeded.
 
-In an example web API context, the limit is 20 requests every 1 second. 
-With a full bucket, the maximum burst is 20 requests before limiter blocks
-with `sleep`.
+In an example web API context, the limit is 20 requests every 1 second. It would
+be very, very bad if we ignore this limit. :c
+
+Rate limiters solve this problem. Using a limiter with a full bucket, the 
+maximum burst is 20 requests before limiter blocks with `sleep`. Tokens are 
+allocated every `1 / token_rate` period, where `token_rate = bucket_size / bucket_period`
+per second.
 
 To create a limiter with a `bucket_size` of 20 tokens and a `bucket_period`
 of 1000 milliseconds:
