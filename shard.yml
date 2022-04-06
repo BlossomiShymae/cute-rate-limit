@@ -1,7 +1,7 @@
 name: cute-rate-limit
 description: |
   A cutesy rate limiter thats uses token bucket algorithm and blocking strategy.
-version: 1.0.0
+version: 1.0.1
 authors:
   - MissUwuieTime <87099578+MissUwuieTime@users.noreply.github.com>
 

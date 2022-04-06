@@ -1,6 +1,6 @@
 # `CuteRateLimit` module that contains rate limiting tools such as `Limiter`.
 module CuteRateLimit
-  VERSION = "0.1.0"
+  VERSION = "1.0.1"
 
   extend self
 

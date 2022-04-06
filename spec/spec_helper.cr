@@ -1,2 +1,2 @@
 require "spec"
-require "../src/cute_rate_limit"
+require "../src/cute-rate-limit"
