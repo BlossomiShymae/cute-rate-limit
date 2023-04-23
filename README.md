@@ -10,7 +10,7 @@ A cute rate limiter in Crystal that implements token bucket algorithm. Uses
    ```yaml
    dependencies:
      cute-rate-limit:
-       github: MissUwuieTime/cute-rate-limit
+       github: BlossomiShymae/cute-rate-limit
    ```
 
 2. Run `shards install`
@@ -66,7 +66,7 @@ Check the bucket of a limiter with `#token_bucket`
 cute_limiter2.token_bucket # => 100
 
 50.times do
-cute_limiter2.use
+   cute_limiter2.use
 end
 
 cute_limiter2.token_bucket # => 50
@@ -74,7 +74,7 @@ cute_limiter2.token_bucket # => 50
 
 ## Contributing
 
-1. Fork it (<https://github.com/MissUwuieTime/cute-rate-limit/fork>)
+1. Fork it (<https://github.com/BlossomiShymae/cute-rate-limit/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -82,4 +82,4 @@ cute_limiter2.token_bucket # => 50
 
 ## Contributors
 
-- [MissUwuieTime](https://github.com/MissUwuieTime) - creator and maintainer
+- [BlossomiShymae](https://github.com/BlossomiShymae) - creator and maintainer
